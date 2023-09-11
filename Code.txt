@@ -1,0 +1,21 @@
+MOV R1 5 //Reg1 = 5
+MOV R2 2 //Reg2 = 2
+ADD R2 R1 R0 //Reg0 = 7
+MOV R2 3 //Reg2 = 3
+LD R1 R2 R3 //Reg3 = data at mem address 5+3
+MOV R1 1 //Reg1 = 1 
+SUB R0 R1 R0 //Reg0 = 7 - 1 = 6
+SUB R0 R1 R0 //Reg0 = 6 - 1 = 5
+SUB R0 R1 R0 //Reg0 = 5 - 1 = 4
+
+//Expected Values in Registers:
+//Reg0 = 4
+//Reg1 = 1
+//Reg2 = 3
+//Reg3 = Value at memory address 5 + 3 = 8
+
+
+//ADD Rn Rm Rd (Rn + Rm)
+//SUB Rn Rm Rd (Rn - Rm)
+//LD Rn Rm Rd (Stores data at mem address Rn+Rm into Rd)
+//MOV Rd imm4 (Stores imm4 value into Rd)
